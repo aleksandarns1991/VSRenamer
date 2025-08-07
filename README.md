@@ -1,9 +1,10 @@
 # VS Renamer
 
-The purpose of this application is to rename Visual Studio project name. 
+The purpose of this application is to rename Visual Studio project. 
+
 How to use it: 
 - Select repository folder of your project
-- When your repo name appear in second text box field,make sure it matches your project name
+- When your repo name appear in the second field,make sure it matches your project name
 - Choose your new project name
 - Click "Rename project"
 

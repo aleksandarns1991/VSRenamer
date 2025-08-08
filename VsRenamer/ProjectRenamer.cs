@@ -22,7 +22,7 @@ namespace VsRenamer.Logic
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex.Message);
+                    Debug.WriteLine($"File rename\rewrite error: {ex.Message}");
                 }
             }
 
@@ -44,7 +44,7 @@ namespace VsRenamer.Logic
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex.Message);
+                    Debug.WriteLine($"Directory rename error: {ex.Message}");
                 }
             }
         }
@@ -57,11 +57,10 @@ namespace VsRenamer.Logic
                 var newDir = Path.Combine(parent, NewName!);
 
                 Directory.Move(ProjectPath!, newDir);
-                ProjectPath = newDir;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
+                Debug.WriteLine($"Rename parent dir error: {ex.Message}");
             }
         }
 
@@ -80,7 +79,7 @@ namespace VsRenamer.Logic
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
+                Debug.WriteLine($"Removing .vs dir error: {ex.Message}");
             }
         }
 
